@@ -54,6 +54,7 @@ void LocalGoalCreator::set_next_goal()
             max_distance = distance;
             min_index = count;
         }
+        count++;
         std::cout << min_index << std::endl;
 
     }
