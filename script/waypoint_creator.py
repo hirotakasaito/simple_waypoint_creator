@@ -24,7 +24,7 @@ class LocalGoalCreator:
         self.estimated_pose_sub = rospy.Subscriber('/amcl_pose',PoseWithCovarianceStamped,self.estimated_pose_call_back)
         # self.global_goal_sub = rospy.Subscriber('/goal_reach',Bool,self.goal_reach_call_back)
 
-        WAYPOINTS_PATH = rospy.get_param("~WAYPOINTS_PATH",'/home/amsl/catkin_ws/src/simple_waypoint_creator/waypoints/waypoints.json')
+        WAYPOINTS_PATH = rospy.get_param("~WAYPOINTS_PATH",'/home/amsl/catkin_ws/src/simple_waypoint_creator/waypoints/ikuta.json')
         with open(WAYPOINTS_PATH) as f:
             waypoints_data = json.load(f)
         self.waypoints = []
